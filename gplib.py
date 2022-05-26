@@ -21,8 +21,8 @@ class ExactGPModel(gpytorch.models.ExactGP):
 
 class GPR(object):
     def __init__(self, init_X, init_y, config):
-        self.X = torch.Floxstar_tensor = torch.FloatTensor(init_X).cuda()
-        self.y = torch.Floxstar_tensor = torch.FloatTensor(init_y).cuda()
+        self.X = torch.FloatTensor(init_X).cuda()
+        self.y = torch.FloatTensor(init_y).cuda()
         self.likelihood = gpytorch.likelihoods.GaussianLikelihood().cuda()#.double()
         self.model = ExactGPModel(self.X, self.y, self.likelihood, config).cuda()#.double()
         self.model.train()
@@ -43,8 +43,8 @@ class GPR(object):
         """
             Add new observation (incremental). It is said to be faster than set_train_data 
         """
-        X = torch.Floxstar_tensor = torch.FloatTensor(new_observe_X).cuda()
-        y = torch.Floxstar_tensor = torch.FloatTensor(new_observe_y).cuda()
+        X = torch.FloatTensor(new_observe_X).cuda()
+        y = torch.FloatTensor(new_observe_y).cuda()
 
         
         self.X = torch.cat([self.X,X], dim=0)
@@ -56,8 +56,8 @@ class GPR(object):
         """
             Change the training data. 
         """
-        self.X = torch.Floxstar_tensor = torch.FloatTensor(X).cuda()
-        self.y = torch.Floxstar_tensor = torch.FloatTensor(y).cuda() 
+        self.X = torch.FloatTensor(X).cuda()
+        self.y = torch.FloatTensor(y).cuda() 
         with torch.no_grad():
             self.model.set_train_data(self.X, self.y, strict=False)   
             
