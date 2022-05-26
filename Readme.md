@@ -4,7 +4,7 @@ Software package of the methodology in paper "Nonmyopic Informative Path Plannin
 
 See demo.ipynb for a concise tutorial.
 
-[May 26, 2022] Special thanks for Glebys Gonzales for presenting the work!
+[May 26, 2022] Special thanks to Glebys Gonzales for presenting the work!
 
 ```
 @article{xiao2022nonmyopic,
