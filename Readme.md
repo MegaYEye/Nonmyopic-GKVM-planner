@@ -6,7 +6,7 @@ See demo.ipynb for a concise tutorial.
 
 [May 26, 2022] Special thanks to Glebys Gonzales for presenting the work!
 
-If the work is useful please cite the following paper
+If the code is useful to your work please cite the following paper
 ```
 @article{xiao2022nonmyopic,
   title={Nonmyopic Informative Path Planning Based on Global Kriging Variance Minimization},
